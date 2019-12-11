@@ -1,3 +1,19 @@
 body {
     background-color: bisque;
 }
+
+.animal {
+    width: 100px;
+    height: 50;
+    color:purple;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 15px;
+    background-color: olivedrab;
+}
+
+.active{
+    border: 2px solid maroon;
+    color: maroon;
+}
