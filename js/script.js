@@ -1,14 +1,17 @@
-const animals = document.querySelectorAll(".animal");
-console.log(animals);
+const myArray = ["lion","cougar","bark"]
+document.addEventListener("DOMContentLoaded", init);
 
-for(let i=0; i<animals.length;i++){
-    animals[i].addEventListener("click", function(){
-        let animal = this.innerHTML;
-        let lowerAnimal = animal.toLowerCase();
-        playit(lowerAnimal);
+function init(){
+    myArray.forEach(function(item){
+        let div = document.createElement("div");
+        div.setAttribute("class","animal " + item);
+        div.innerText = item.toUpperCase();
+        div.addEventListener("click", function(){
+            playit(item);
+        })
+    document.body.appendChild(div);  
     })
 }
-
 
 function playit(name){
     let activeElem = document.querySelector("."+name);
